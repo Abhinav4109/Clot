@@ -2,13 +2,15 @@ import 'package:clot/core/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
+  final VoidCallback onPressed;
   final String buttonText;
-  const CustomButton({super.key, required this.buttonText});
+  const CustomButton(
+      {super.key, required this.buttonText, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: TextButton.styleFrom(
             backgroundColor: AppColors.buttonColor,
             foregroundColor: Colors.white,

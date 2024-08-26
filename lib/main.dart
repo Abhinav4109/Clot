@@ -1,5 +1,7 @@
 import 'package:clot/core/themes/app_theme.dart';
+import 'package:clot/features/authentication/presentation/screens/signin_password_screen.dart';
 import 'package:clot/features/authentication/presentation/screens/signin_screen.dart';
+import 'package:clot/routes/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +18,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme.lightTheme,
-      home: const SigninScreen()
+      onGenerateRoute: generateRoute,
+      initialRoute: SigninScreen.routeName,
     );
   }
 }
